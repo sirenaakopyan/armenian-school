@@ -1,0 +1,173 @@
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import Navbar from '../../components/Navbar';
+import Sidebar from '../../components/Sidebar';
+import { posts } from './posts';
+
+const PageWrapper = styled.div`
+  background: #0c0c0c;
+  min-height: 100vh;
+`;
+
+const Header = styled.div`
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 120px 24px 60px;
+`;
+
+const HeaderTitle = styled.h1`
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  max-width: 1100px;
+  margin: 0 auto 12px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+`;
+
+const Breadcrumb = styled.div`
+  max-width: 1100px;
+  margin: 0 auto 20px;
+
+  a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  span {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+`;
+
+const Feed = styled.div`
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px;
+`;
+
+const PostCard = styled.article`
+  border-bottom: 1px solid #222;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+`;
+
+const PostDate = styled.p`
+  color: #0038ff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+`;
+
+const PostTitle = styled.h2`
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 16px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.3rem;
+  }
+`;
+
+const PostExcerpt = styled.p`
+  color: #aaa;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+`;
+
+const PostBody = styled.div`
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+
+  strong {
+    color: #fff;
+    font-weight: 600;
+  }
+`;
+
+const ToggleButton = styled.button`
+  background: none;
+  border: 1px solid #0038ff;
+  color: #0038ff;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #0038ff;
+    color: #fff;
+  }
+`;
+
+const formatBody = (text) => {
+  return text.split(/(\*\*[^*]+\*\*)/).map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+};
+
+const PostEntry = ({ post }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <PostCard>
+      <PostDate>{post.date}</PostDate>
+      <PostTitle>{post.title}</PostTitle>
+      <PostExcerpt>{post.excerpt}</PostExcerpt>
+      {expanded && <PostBody>{formatBody(post.body)}</PostBody>}
+      <ToggleButton onClick={() => setExpanded(!expanded)} style={{ marginTop: expanded ? '24px' : '0' }}>
+        {expanded ? 'Show less' : 'Read full update'}
+      </ToggleButton>
+    </PostCard>
+  );
+};
+
+const UpdatesPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleHandler = () => setIsOpen(!isOpen);
+
+  return (
+    <PageWrapper>
+      <Sidebar isOpen={isOpen} toggleState={toggleHandler} />
+      <Navbar toggleState={toggleHandler} />
+      <Header>
+        <Breadcrumb>
+          <Link to='/expansion'>Expansion</Link>
+          <span>/</span>
+          <Link to='/expansion/updates'>Updates</Link>
+        </Breadcrumb>
+        <HeaderTitle>Project Updates</HeaderTitle>
+      </Header>
+      <Feed>
+        {posts.map((post) => (
+          <PostEntry key={post.id} post={post} />
+        ))}
+      </Feed>
+    </PageWrapper>
+  );
+};
+
+export default UpdatesPage;

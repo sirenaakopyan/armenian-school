@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
@@ -60,6 +61,21 @@ const SectionText = styled.p`
   line-height: 1.8;
 `;
 
+const SectionLink = styled(Link)`
+  display: inline-block;
+  margin-top: 16px;
+  color: #0038ff;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px solid #0038ff;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+`;
+
 const ComingSoonBadge = styled.span`
   display: inline-block;
   background: #0038ff;
@@ -98,12 +114,11 @@ const ExpansionPage = () => {
       </Section>
 
       <Section>
-        <SectionTitle>
-          Updates <ComingSoonBadge>Coming Soon</ComingSoonBadge>
-        </SectionTitle>
+        <SectionTitle>Updates</SectionTitle>
         <SectionText>
-          Monthly project updates and milestone announcements will appear here.
+          Monthly project updates and milestone announcements from the Expansion Committee.
         </SectionText>
+        <SectionLink to='/expansion/updates'>Read all updates &rarr;</SectionLink>
       </Section>
 
       <Section>
