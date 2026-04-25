@@ -8,6 +8,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavRouterLink,
   NavBtn,
   NavBtnLink,
 } from './NavbarElements';
@@ -36,6 +37,9 @@ const Navbar = ({ toggleState }) => {
             </NavItem>
             <NavItem>
               <NavLinks to='/getInvolved'>Get Involved</NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavRouterLink to='/expansion'>Expansion</NavRouterLink>
             </NavItem>
           </NavMenu>
           {/* <NavBtn>
