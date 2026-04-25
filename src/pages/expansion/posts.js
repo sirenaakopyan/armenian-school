@@ -4,10 +4,10 @@ export const posts = [
     date: 'April 2026',
     title: 'We Are Building Something Lasting',
     excerpt:
-      'After years of dreaming and months of planning, we are proud to announce the official launch of our community communication hub for the Armenian School Expansion project.',
+      'We are proud to announce the official launch of our community communication hub for the Armenian School Expansion project.',
     body: `Dear Members of Our Community,
 
-After years of dreaming and months of careful planning, we are proud to formally announce the launch of this page — our dedicated communication hub for the Sourp Harutyun Armenian School Expansion and Community Center project in Redmond, Washington.
+We are proud to formally announce the launch of this page — our dedicated communication hub for the Sourp Harutyun Armenian School Expansion and Community Center project in Redmond, Washington.
 
 This is not just a construction project. It is a statement of who we are as a community and what we want to pass on to the next generation. Our school has served Armenian families across the greater Seattle area for decades, and today our growing student population and the needs of our community demand more space, more resources, and a more permanent home.
 
