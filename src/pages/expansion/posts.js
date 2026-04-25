@@ -2,7 +2,7 @@ export const posts = [
   {
     id: 1,
     date: 'April 2026',
-    title: 'We Are Building Something Lasting — An Update from the Expansion Committee',
+    title: 'We Are Building Something Lasting',
     excerpt:
       'After years of dreaming and months of planning, we are proud to announce the official launch of our community communication hub for the Armenian School Expansion project.',
     body: `Dear Members of Our Community,
