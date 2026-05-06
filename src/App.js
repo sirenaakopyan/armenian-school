@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
+import ExpansionPage from './pages/expansion';
 
 
 function App() {
   return (
     <Router>
-      <Home />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/expansion' element={<ExpansionPage />} />
+      </Routes>
     </Router>
   );
 }

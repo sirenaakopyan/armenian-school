@@ -5,6 +5,7 @@ import {
   CloseIcon,
   SidebarWrapper,
   SidebarLink,
+  SidebarRouterLink,
   SidebarMenu,
   SideBtnWrap,
   SidebarRoute,
@@ -33,6 +34,9 @@ const Sidebar = ({ isOpen, toggleState }) => {
           <SidebarLink to='getInvolved' onClick={toggleState}>
             Get Involved
           </SidebarLink>
+          <SidebarRouterLink to='/expansion' onClick={toggleState}>
+            Expansion
+          </SidebarRouterLink>
         </SidebarMenu>
         <SideBtnWrap>
           <SidebarRoute to='/enroll'>Enroll</SidebarRoute>

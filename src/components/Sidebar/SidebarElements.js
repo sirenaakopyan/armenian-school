@@ -39,15 +39,32 @@ export const SidebarWrapper = styled.div`
 export const SidebarMenu = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 80px);
+  grid-template-rows: repeat(7, 80px);
   text-align: center;
 
   @media screen and (max-width: 480px) {
-    grid-template-rows: repeat(6, 60px);
+    grid-template-rows: repeat(7, 60px);
   }
 `;
 
 export const SidebarLink = styled(LinkS)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #0038ff;
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+export const SidebarRouterLink = styled(LinkR)`
   display: flex;
   align-items: center;
   justify-content: center;
