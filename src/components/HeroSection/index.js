@@ -1,33 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Video from '../../videos/intro_vid.mp4';
-import { Button } from '../ButtonElement';
 import {
   HeroContainer,
   HeroBg,
   VideoBg,
-  HeroContent /*HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight*/,
+  HeroContent,
+  HeroH1,
 } from './HeroElements';
 
 const HeroSection = () => {
-  const [hover, setHover] = useState(false);
-
-  const onHover = () => {
-    setHover(!hover);
-  };
-
   return (
     <HeroContainer id='home'>
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        {/* <HeroH1></HeroH1>
-                <HeroP></HeroP>
-                <HeroBtnWrapper>
-                    <Button to="enroll" onMouseEnter={onHover} onMouseLeave={onHover}>
-                        Enroll {hover ? <ArrowForward /> : <ArrowRight />}
-                    </Button>
-                </HeroBtnWrapper> */}
+        <HeroH1>Welcome to the Holy Resurrection Armenian School of Seattle</HeroH1>
       </HeroContent>
     </HeroContainer>
   );
