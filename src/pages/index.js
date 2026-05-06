@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import CalendarSection from '../components/CalendarSection';
+import ContactSection from '../components/ContactSection';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
@@ -18,6 +19,7 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <CalendarSection />
+      <ContactSection />
     </>
   );
 };
