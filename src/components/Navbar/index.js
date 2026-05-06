@@ -9,7 +9,7 @@ import {
   NavItem,
   NavLinks,
   NavBtn,
-  NavBtnLink,
+  NavBtnExternal,
 } from './NavbarElements';
 
 const Navbar = ({ toggleState }) => {
@@ -38,9 +38,9 @@ const Navbar = ({ toggleState }) => {
               <NavLinks to='/getInvolved'>Get Involved</NavLinks>
             </NavItem>
           </NavMenu>
-          {/* <NavBtn>
-            <NavBtnLink to='/enroll'>Enroll</NavBtnLink>
-          </NavBtn> */}
+          <NavBtn>
+            <NavBtnExternal href='https://armenianchurchwa.org/armenian-school/' target='_blank' rel='noreferrer'>Donate</NavBtnExternal>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

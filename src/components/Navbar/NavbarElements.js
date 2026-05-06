@@ -96,6 +96,26 @@ export const NavBtn = styled.nav`
   }
 `;
 
+export const NavBtnExternal = styled.a`
+    border-radius: 50px;
+    background: #0038ff;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #fff;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        color: #0038ff;
+    }
+`;
+
 export const NavBtnLink = styled(LinkR)`
     border-radius: 50px;
     background: #0038ff;
