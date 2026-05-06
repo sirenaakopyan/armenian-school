@@ -10,7 +10,7 @@ import {
   NavLinks,
   NavRouterLink,
   NavBtn,
-  NavBtnLink,
+  NavBtnExternal,
 } from './NavbarElements';
 
 const Navbar = ({ toggleState }) => {
@@ -42,9 +42,9 @@ const Navbar = ({ toggleState }) => {
               <NavRouterLink to='/expansion'>Expansion</NavRouterLink>
             </NavItem>
           </NavMenu>
-          {/* <NavBtn>
-            <NavBtnLink to='/enroll'>Enroll</NavBtnLink>
-          </NavBtn> */}
+          <NavBtn>
+            <NavBtnExternal href='https://armenianchurchwa.org/armenian-school/' target='_blank' rel='noreferrer'>Donate</NavBtnExternal>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
