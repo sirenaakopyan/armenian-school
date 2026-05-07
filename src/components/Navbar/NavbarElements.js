@@ -99,6 +99,7 @@ export const NavRouterLink = styled(LinkR)`
 
   &:hover {
     color: #0038ff;
+    border-bottom: 3px solid #0038ff;
   }
 
   &.active {
