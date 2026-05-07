@@ -11,11 +11,15 @@ We are proud to formally announce the launch of this page — our dedicated comm
 
 This is not just a construction project. It is a statement of who we are as a community and what we want to pass on to the next generation. Our school has served Armenian families across the greater Seattle area for decades, and today our growing student population and the needs of our community demand more space, more resources, and a more permanent home.
 
+[IMAGE:/images/update1-img1.jpg|Community center expansion visual]
+
 **What We Are Building**
 
 The expansion will do two things. First, it will significantly enlarge the school facility to accommodate our growing number of students and allow us to offer a richer, more complete Armenian education. Second, it will create a multipurpose community events venue — a space large enough to host weddings, cultural celebrations, community gatherings, and major events that today we must hold elsewhere.
 
 This will be a space that belongs to all of us.
+
+[IMAGE:/images/update1-img2.jpg|Expansion project rendering]
 
 **Why This Page Exists**
 
@@ -32,6 +36,8 @@ Here you will find:
 This project belongs to the community — and its success depends on the community. Whether you can volunteer your time, donate your professional skills, or contribute financially, every act of support brings us closer to the finish line. Details on how to get involved will be published here soon.
 
 We are grateful for your trust, your patience, and your partnership. We will update this page regularly and will always be honest with you about where things stand.
+
+[IMAGE:/images/update1-img3.jpg|Expansion project rendering]
 
 With gratitude and excitement,
 
