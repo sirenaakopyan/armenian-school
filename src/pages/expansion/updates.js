@@ -120,10 +120,22 @@ const ToggleButton = styled.button`
   }
 `;
 
+const PostImage = styled.img`
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin: 24px 0;
+`;
+
 const formatBody = (text) => {
-  return text.split(/(\*\*[^*]+\*\*)/).map((part, i) => {
+  return text.split(/(\*\*[^*]+\*\*|\[IMAGE:[^\]]+\])/).map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.startsWith('[IMAGE:')) {
+      const inner = part.slice(7, -1);
+      const [src, alt] = inner.split('|');
+      return <PostImage key={i} src={src} alt={alt || ''} />;
     }
     return part;
   });
