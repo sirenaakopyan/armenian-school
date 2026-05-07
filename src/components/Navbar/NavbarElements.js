@@ -95,6 +95,11 @@ export const NavRouterLink = styled(LinkR)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: #0038ff;
+  }
 
   &.active {
     border-bottom: 3px solid #0038ff;
