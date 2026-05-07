@@ -61,6 +61,13 @@ const SectionText = styled.p`
   line-height: 1.8;
 `;
 
+const ProjectImage = styled.img`
+  width: 100%;
+  margin-top: 32px;
+  border-radius: 10px;
+  display: block;
+`;
+
 const SectionLink = styled(Link)`
   display: inline-block;
   margin-top: 16px;
@@ -113,6 +120,10 @@ const ExpansionPage = () => {
           worthy of the next generation of Armenian students. Read on for the
           latest updates, financials, and ways to get involved.
         </SectionText>
+        <ProjectImage
+          src='/images/expansion-rendering.png'
+          alt='Aerial rendering of the Armenian Community Center expansion in Redmond, WA'
+        />
       </Section>
 
       <Section>
