@@ -18,7 +18,10 @@ const Navbar = ({ toggleState }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>Seattle Armenian School</NavLogo>
+          <NavLogo to='/'>
+            <img src='/images/logo.png' alt='Seattle Armenian School logo' />
+            Seattle Armenian School
+          </NavLogo>
           <MobileIcon onClick={toggleState}>
             <FaBars />
           </MobileIcon>
