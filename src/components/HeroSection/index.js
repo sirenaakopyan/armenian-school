@@ -6,6 +6,10 @@ import {
   VideoBg,
   HeroContent,
   HeroH1,
+  HeroSubtitle,
+  HeroBtnWrapper,
+  HeroBtn,
+  HeroBtnOutline,
 } from './HeroElements';
 
 const HeroSection = () => {
@@ -15,7 +19,21 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Welcome to the Holy Resurrection Armenian School of Seattle</HeroH1>
+        <HeroH1>Holy Resurrection Armenian School</HeroH1>
+        <HeroSubtitle>
+          Nurturing the next generation of Armenian language, culture, and
+          community in the greater Seattle area.
+        </HeroSubtitle>
+        <HeroBtnWrapper>
+          <HeroBtn href='#about'>Learn More</HeroBtn>
+          <HeroBtnOutline
+            href='https://armenianchurchwa.org/armenian-school/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Donate
+          </HeroBtnOutline>
+        </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
   );

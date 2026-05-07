@@ -18,13 +18,16 @@ const Navbar = ({ toggleState }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>Seattle Armenian School</NavLogo>
+          <NavLogo to='/'>
+            <img src='/images/logo.png' alt='Seattle Armenian School logo' />
+            Seattle Armenian School
+          </NavLogo>
           <MobileIcon onClick={toggleState}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavRouterLink to='/#about'>About</NavRouterLink>
+              <NavRouterLink to='/#about' end>About</NavRouterLink>
             </NavItem>
             <NavItem>
               <NavRouterLink to='/calendar'>Calendar</NavRouterLink>

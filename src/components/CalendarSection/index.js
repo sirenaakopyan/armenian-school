@@ -2,25 +2,12 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const CalendarContainer = styled.section`
-  background: #f8f8f8;
-  padding: 80px 24px;
-`;
-
-const Inner = styled.div`
-  max-width: 1100px;
-  margin: 0 auto;
-`;
-
-const Heading = styled.h2`
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #303030;
-  margin-bottom: 40px;
-  text-align: center;
-`;
-
-const IframeWrapper = styled.div`
-  width: 100%;
+  iframe {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    border: none;
+    display: block;
+  }
 `;
 
 const CalendarSection = () => {
@@ -35,17 +22,11 @@ const CalendarSection = () => {
 
   return (
     <CalendarContainer id='calendar'>
-      <Inner>
-        <Heading>Calendar</Heading>
-        <IframeWrapper>
-          <iframe
-            src='https://embed.styledcalendar.com/#ogJNNliZJQS1WwHPztD4'
-            title='School Calendar'
-            data-cy='calendar-embed-iframe'
-            style={{ width: '100%', height: '700px', border: 'none' }}
-          />
-        </IframeWrapper>
-      </Inner>
+      <iframe
+        src='https://embed.styledcalendar.com/#ogJNNliZJQS1WwHPztD4'
+        title='School Calendar'
+        data-cy='calendar-embed-iframe'
+      />
     </CalendarContainer>
   );
 };
