@@ -20,9 +20,9 @@ const Sidebar = ({ isOpen, toggleState }) => {
           <SidebarLink to='about' onClick={toggleState}>
             About
           </SidebarLink>
-          <SidebarLink to='calendar' onClick={toggleState}>
+          <SidebarRouterLink to='/calendar' onClick={toggleState}>
             Calendar
-          </SidebarLink>
+          </SidebarRouterLink>
           <SidebarRouterLink to='/expansion' onClick={toggleState}>
             Expansion
           </SidebarRouterLink>

@@ -27,7 +27,7 @@ const Navbar = ({ toggleState }) => {
               <NavLinks to='about'>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='calendar'>Calendar</NavLinks>
+              <NavRouterLink to='/calendar'>Calendar</NavRouterLink>
             </NavItem>
             <NavItem>
               <NavRouterLink to='/expansion'>Expansion</NavRouterLink>
