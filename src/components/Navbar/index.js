@@ -24,19 +24,10 @@ const Navbar = ({ toggleState }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='/about'>About</NavLinks>
+              <NavLinks to='about'>About</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='/school'>School</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='/camp'>Camp</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='/calendar'>Calendar</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='/getInvolved'>Get Involved</NavLinks>
+              <NavLinks to='calendar'>Calendar</NavLinks>
             </NavItem>
             <NavItem>
               <NavRouterLink to='/expansion'>Expansion</NavRouterLink>

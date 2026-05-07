@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const AboutContainer = styled.section`
   background: #fff;
   padding: 80px 24px;
-  id: about;
 `;
 
 const Inner = styled.div`
