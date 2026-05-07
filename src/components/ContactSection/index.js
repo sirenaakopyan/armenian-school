@@ -124,7 +124,7 @@ const ContactSection = () => {
                 <a
                   href='https://www.google.com/maps/search/?api=1&query=11423+Redmond+-+Woodinville+Rd+NE,+Redmond,+WA+980526'
                   target='_blank'
-                  rel='noreferrer'
+                  rel='noopener noreferrer'
                 >
                   <FaMapMarkerAlt /> 11423 Redmond–Woodinville Rd NE, Redmond, WA
                 </a>
@@ -133,7 +133,7 @@ const ContactSection = () => {
                 <a
                   href='https://m.facebook.com/groups/2370977892922128/'
                   target='_blank'
-                  rel='noreferrer'
+                  rel='noopener noreferrer'
                 >
                   <FaFacebook /> Join Our Facebook Group
                 </a>
@@ -142,7 +142,7 @@ const ContactSection = () => {
                 <a
                   href='https://armenianchurchwa.org/armenian-school/'
                   target='_blank'
-                  rel='noreferrer'
+                  rel='noopener noreferrer'
                 >
                   <FaHeart /> Donate to the School
                 </a>
