@@ -4,7 +4,6 @@ import {
   Icon,
   CloseIcon,
   SidebarWrapper,
-  SidebarLink,
   SidebarRouterLink,
   SidebarMenu,
 } from './SidebarElements';
@@ -17,9 +16,9 @@ const Sidebar = ({ isOpen, toggleState }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to='about' onClick={toggleState}>
+          <SidebarRouterLink to='/#about' onClick={toggleState}>
             About
-          </SidebarLink>
+          </SidebarRouterLink>
           <SidebarRouterLink to='/calendar' onClick={toggleState}>
             Calendar
           </SidebarRouterLink>
