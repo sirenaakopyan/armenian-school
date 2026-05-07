@@ -5,12 +5,12 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
 const PageWrapper = styled.div`
-  background: #0c0c0c;
+  background: #fff;
   min-height: 100vh;
 `;
 
 const Hero = styled.div`
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: #0038ff;
   padding: 120px 24px 80px;
   text-align: center;
 `;
@@ -27,7 +27,7 @@ const HeroTitle = styled.h1`
 `;
 
 const HeroSubtitle = styled.p`
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.85);
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
@@ -41,7 +41,7 @@ const Section = styled.section`
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 24px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #eee;
 
   &:last-child {
     border-bottom: none;
@@ -49,14 +49,14 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  color: #fff;
+  color: #303030;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 16px;
 `;
 
 const SectionText = styled.p`
-  color: #aaa;
+  color: #555;
   font-size: 1rem;
   line-height: 1.8;
 `;

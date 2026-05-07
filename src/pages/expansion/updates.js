@@ -6,12 +6,12 @@ import Sidebar from '../../components/Sidebar';
 import { posts } from './posts';
 
 const PageWrapper = styled.div`
-  background: #0c0c0c;
+  background: #fff;
   min-height: 100vh;
 `;
 
 const Header = styled.div`
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background: #0038ff;
   padding: 120px 24px 60px;
 `;
 
@@ -32,7 +32,7 @@ const Breadcrumb = styled.div`
   margin: 0 auto 20px;
 
   a {
-    color: #aaa;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     font-size: 0.9rem;
 
@@ -42,7 +42,7 @@ const Breadcrumb = styled.div`
   }
 
   span {
-    color: #666;
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.9rem;
     margin: 0 8px;
   }
@@ -55,7 +55,7 @@ const Feed = styled.div`
 `;
 
 const PostCard = styled.article`
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #eee;
   padding-bottom: 48px;
   margin-bottom: 48px;
 
@@ -74,7 +74,7 @@ const PostDate = styled.p`
 `;
 
 const PostTitle = styled.h2`
-  color: #fff;
+  color: #303030;
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.4;
@@ -86,20 +86,20 @@ const PostTitle = styled.h2`
 `;
 
 const PostExcerpt = styled.p`
-  color: #aaa;
+  color: #555;
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 20px;
 `;
 
 const PostBody = styled.div`
-  color: #ccc;
+  color: #555;
   font-size: 0.95rem;
   line-height: 1.9;
   white-space: pre-wrap;
 
   strong {
-    color: #fff;
+    color: #303030;
     font-weight: 600;
   }
 `;
