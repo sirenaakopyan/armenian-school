@@ -22,10 +22,10 @@ This will be a space that belongs to all of us.
 We believe that a project of this scale must be built not only with bricks and mortar, but with transparency and trust. This page is our commitment to keeping you informed every step of the way — from planning and permits to groundbreaking and completion.
 
 Here you will find:
-• Regular project updates as milestones are reached
-• A clear picture of our finances — what has been raised, what has been spent, and what remains
-• Opportunities to contribute your time, skills, or financial support
-• Answers to your questions through our upcoming FAQ section
+- Regular project updates as milestones are reached
+- A clear picture of our finances — what has been raised, what has been spent, and what remains
+- Opportunities to contribute your time, skills, or financial support
+- Answers to your questions through our upcoming FAQ section
 
 **How You Can Help**
 
@@ -36,15 +36,6 @@ We are grateful for your trust, your patience, and your partnership. We will upd
 With gratitude and excitement,
 
 **The Armenian School Expansion Committee**
-Redmond, Washington
-
-**About the Project**
-
-[IMAGE:/images/expansion-rendering.png|Aerial rendering of the Armenian Community Center expansion in Redmond, WA]
-
-A multifunctional Community Center providing:
-• Classrooms to accommodate 130 students concurrently
-• Banquet Hall accommodating 250 guests and providing a stage
-• Commercial Kitchen`,
+Redmond, Washington`,
   },
 ];
