@@ -2,13 +2,9 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const CalendarContainer = styled.section`
-  height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-
   iframe {
-    flex: 1;
     width: 100%;
+    min-height: calc(100vh - 80px);
     border: none;
     display: block;
   }
