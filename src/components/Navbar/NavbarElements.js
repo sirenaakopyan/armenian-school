@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 import { Link as LinkS } from 'react-scroll';
-import { FaBackspace } from 'react-icons/fa';
 
 export const Nav = styled.nav`
   background: #303030;
@@ -130,22 +129,3 @@ export const NavBtnExternal = styled.a`
     }
 `;
 
-export const NavBtnLink = styled(LinkR)`
-    border-radius: 50px;
-    background: #0038ff;
-    white-space: nowrap;
-    padding: 10px 22px;
-    color: #fff;
-    font-size: 1.2rem;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-
-    &:hover{
-        transition: all 0.2s ease-in-out;
-        background: #fff
-        color: #0038ff;
-    }
-`;

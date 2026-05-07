@@ -7,8 +7,6 @@ import {
   SidebarLink,
   SidebarRouterLink,
   SidebarMenu,
-  SideBtnWrap,
-  SidebarRoute,
 } from './SidebarElements';
 
 const Sidebar = ({ isOpen, toggleState }) => {
@@ -22,25 +20,13 @@ const Sidebar = ({ isOpen, toggleState }) => {
           <SidebarLink to='about' onClick={toggleState}>
             About
           </SidebarLink>
-          <SidebarLink to='school' onClick={toggleState}>
-            School
-          </SidebarLink>
-          <SidebarLink to='camp' onClick={toggleState}>
-            Camp
-          </SidebarLink>
           <SidebarLink to='calendar' onClick={toggleState}>
             Calendar
-          </SidebarLink>
-          <SidebarLink to='getInvolved' onClick={toggleState}>
-            Get Involved
           </SidebarLink>
           <SidebarRouterLink to='/expansion' onClick={toggleState}>
             Expansion
           </SidebarRouterLink>
         </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to='/enroll'>Enroll</SidebarRoute>
-        </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
   );
