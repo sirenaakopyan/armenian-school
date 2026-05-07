@@ -108,8 +108,10 @@ const ExpansionPage = () => {
       <Section>
         <SectionTitle>About the Project</SectionTitle>
         <SectionText>
-          Details about the vision, scope, expected functions, facility size, and
-          projected completion date will be published here soon.
+          Something meaningful is taking shape. After years of dreaming and
+          months of planning, our community is coming together to build a space
+          worthy of the next generation of Armenian students. Read on for the
+          latest updates, financials, and ways to get involved.
         </SectionText>
       </Section>
 
