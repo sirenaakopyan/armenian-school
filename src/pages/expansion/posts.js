@@ -42,15 +42,6 @@ We are grateful for your trust, your patience, and your partnership. We will upd
 With gratitude and excitement,
 
 **The Armenian School Expansion Committee**
-Redmond, Washington
-
-**About the Project**
-
-[IMAGE:/images/expansion-rendering.png|Aerial rendering of the Armenian Community Center expansion in Redmond, WA]
-
-A multifunctional Community Center providing:
-• Classrooms to accommodate 130 students concurrently
-• Banquet Hall accommodating 250 guests and providing a stage
-• Commercial Kitchen`,
+Redmond, Washington`,
   },
 ];
