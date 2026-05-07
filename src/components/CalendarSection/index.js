@@ -42,7 +42,7 @@ const CalendarSection = () => {
             src='https://embed.styledcalendar.com/#ogJNNliZJQS1WwHPztD4'
             title='School Calendar'
             data-cy='calendar-embed-iframe'
-            style={{ width: '100%', border: 'none' }}
+            style={{ width: '100%', height: '700px', border: 'none' }}
           />
         </IframeWrapper>
       </Inner>
