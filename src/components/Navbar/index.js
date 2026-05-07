@@ -24,7 +24,7 @@ const Navbar = ({ toggleState }) => {
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to='about'>About</NavLinks>
+              <NavRouterLink to='/#about'>About</NavRouterLink>
             </NavItem>
             <NavItem>
               <NavRouterLink to='/calendar'>Calendar</NavRouterLink>
