@@ -124,7 +124,14 @@ const PostImage = styled.img`
   width: 100%;
   border-radius: 8px;
   display: block;
-  margin: 24px 0;
+  margin: 24px 0 0;
+`;
+
+const ImageCaption = styled.p`
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 8px 0 24px;
 `;
 
 const formatBody = (text) => {
@@ -134,8 +141,13 @@ const formatBody = (text) => {
     }
     if (part.startsWith('[IMAGE:')) {
       const inner = part.slice(7, -1);
-      const [src, alt] = inner.split('|');
-      return <PostImage key={i} src={src} alt={alt || ''} />;
+      const [src, alt, caption] = inner.split('|');
+      return (
+        <React.Fragment key={i}>
+          <PostImage src={src} alt={alt || ''} />
+          {caption && <ImageCaption>{caption}</ImageCaption>}
+        </React.Fragment>
+      );
     }
     return part;
   });

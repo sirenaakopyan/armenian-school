@@ -61,6 +61,18 @@ const SectionText = styled.p`
   line-height: 1.8;
 `;
 
+const FeatureList = styled.ul`
+  color: #555;
+  font-size: 1rem;
+  line-height: 2;
+  margin: 16px 0 16px 20px;
+  padding: 0;
+
+  li {
+    margin-bottom: 4px;
+  }
+`;
+
 const ProjectImage = styled.img`
   width: 100%;
   margin-top: 32px;
@@ -115,15 +127,29 @@ const ExpansionPage = () => {
       <Section>
         <SectionTitle>About the Project</SectionTitle>
         <SectionText>
-          Something meaningful is taking shape. After years of dreaming and
-          months of planning, our community is coming together to build a space
-          worthy of the next generation of Armenian students. Read on for the
-          latest updates, financials, and ways to get involved.
+          We are building a multifunctional Community Center that will serve as
+          the heart of the Armenian community in Redmond, Washington. The new
+          facility will provide:
+        </SectionText>
+        <FeatureList>
+          <li>Classrooms to accommodate 130 students concurrently</li>
+          <li>Banquet Hall accommodating up to 250 guests, including a stage and a dance floor</li>
+          <li>Commercial Kitchen</li>
+        </FeatureList>
+        <SectionText>
+          The expansion will enlarge school facilities for growing enrollment
+          and create a multipurpose community events venue — a banquet and
+          concert hall for weddings, cultural celebrations, community
+          gatherings, and major events.
         </SectionText>
         <ProjectImage
-          src='/images/expansion-rendering.png'
-          alt='Aerial rendering of the Armenian Community Center expansion in Redmond, WA'
+          src='/images/church-current.png'
+          alt='Armenian Church and School in Redmond, Washington'
         />
+        <SectionText style={{ marginTop: '24px' }}>
+          This is not just a construction project. It is a statement of who we
+          are as a community and what we want to pass on to the next generation.
+        </SectionText>
       </Section>
 
       <Section>
@@ -145,22 +171,35 @@ const ExpansionPage = () => {
       </Section>
 
       <Section>
-        <SectionTitle>
-          Volunteer Opportunities <ComingSoonBadge>Coming Soon</ComingSoonBadge>
-        </SectionTitle>
+        <SectionTitle>Volunteer Opportunities</SectionTitle>
         <SectionText>
-          Ways to contribute your time and skills to the expansion project will
-          be listed here.
+          We are striving to minimize the cost of construction by leveraging the
+          help of volunteers from our community. Learn how you can contribute
+          your time, skills, or professional services.
         </SectionText>
+        <SectionLink to='/expansion/volunteer'>
+          Learn how to volunteer &rarr;
+        </SectionLink>
       </Section>
 
       <Section>
-        <SectionTitle>
-          F.A.Q. <ComingSoonBadge>Coming Soon</ComingSoonBadge>
-        </SectionTitle>
+        <SectionTitle>Your Financial Support Is Needed</SectionTitle>
+        <SectionText>
+          Without broad participation of our community members this project will
+          not be possible. Every contribution brings us closer to making the
+          Community Center a reality.
+        </SectionText>
+        <SectionLink to='/expansion/donate'>
+          Learn how to contribute &rarr;
+        </SectionLink>
+      </Section>
+
+      <Section>
+        <SectionTitle>F.A.Q.</SectionTitle>
         <SectionText>
           Answers to frequently asked questions about the expansion project.
         </SectionText>
+        <SectionLink to='/expansion/faq'>View all questions &rarr;</SectionLink>
       </Section>
 
       <Section>
