@@ -7,6 +7,7 @@ import UpdatesPage from './pages/expansion/updates';
 import FAQPage from './pages/expansion/faq';
 import VolunteerPage from './pages/expansion/volunteer';
 import DonatePage from './pages/expansion/donate';
+import SubmitQuestionPage from './pages/expansion/submit-question';
 import CalendarPage from './pages/calendar';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/expansion/faq' element={<FAQPage />} />
         <Route path='/expansion/volunteer' element={<VolunteerPage />} />
         <Route path='/expansion/donate' element={<DonatePage />} />
+        <Route path='/expansion/submit-question' element={<SubmitQuestionPage />} />
         <Route path='/calendar' element={<CalendarPage />} />
       </Routes>
     </Router>

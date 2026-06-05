@@ -203,13 +203,14 @@ const ExpansionPage = () => {
       </Section>
 
       <Section>
-        <SectionTitle>
-          Submit a Question <ComingSoonBadge>Coming Soon</ComingSoonBadge>
-        </SectionTitle>
+        <SectionTitle>Submit a Question</SectionTitle>
         <SectionText>
-          Registered community members will be able to submit questions and
-          comments to the Construction Committee here.
+          Have a question about the expansion project? Check if it's already
+          been answered, or send it directly to the Expansion Committee.
         </SectionText>
+        <SectionLink to='/expansion/submit-question'>
+          Ask a question &rarr;
+        </SectionLink>
       </Section>
     </PageWrapper>
   );
