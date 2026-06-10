@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
-const DONATE_URL =
-  'https://www.paypal.com/donate?token=_pOOiwi1etb0W59926ngwa3xUCwngc7_uRwBF0whV4ZX7t3N0haHzNFsVX-gRy9C3_-9p42MEYTuy_ya';
-
 const PageWrapper = styled.div`
   background: #fff;
   min-height: 100vh;
@@ -119,51 +116,18 @@ const DonateCardText = styled.p`
   margin-bottom: 28px;
 `;
 
-const CTAButton = styled.a`
+const PayPalForm = styled.form`
   display: inline-block;
-  background: #0038ff;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  padding: 16px 48px;
-  border-radius: 50px;
-  text-decoration: none;
+`;
+
+const PayPalButton = styled.input`
+  cursor: pointer;
+  border: none;
   transition: opacity 0.2s;
 
   &:hover {
     opacity: 0.85;
   }
-`;
-
-const InstructionBox = styled.div`
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px 24px;
-  margin-top: 24px;
-  text-align: left;
-`;
-
-const InstructionTitle = styled.p`
-  color: #303030;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-`;
-
-const InstructionStep = styled.p`
-  color: #555;
-  font-size: 0.85rem;
-  line-height: 1.7;
-  margin: 0;
-`;
-
-const FundName = styled.span`
-  background: #eef1ff;
-  color: #0038ff;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 4px;
 `;
 
 const DonatePage = () => {
@@ -217,27 +181,26 @@ const DonatePage = () => {
             Donate via PayPal
           </DonateCardTitle>
           <DonateCardText>
-            You will be redirected to the Church's secure PayPal donation page
-            where you can choose your amount and set up a recurring monthly
+            Click the button below to make a secure donation through PayPal.
+            You can choose your amount and set up a recurring monthly
             contribution.
           </DonateCardText>
 
-          <CTAButton
-            href={DONATE_URL}
-            target='_blank'
-            rel='noopener noreferrer'
+          <PayPalForm
+            action='https://www.paypal.com/donate'
+            method='post'
+            target='_top'
           >
-            Donate Now
-          </CTAButton>
-
-          <InstructionBox>
-            <InstructionTitle>Important: Select the correct fund</InstructionTitle>
-            <InstructionStep>
-              On the PayPal page, under "Use this donation for," please
-              select <FundName>Armenian School and Community Center Fund</FundName> from
-              the dropdown menu before completing your donation.
-            </InstructionStep>
-          </InstructionBox>
+            <input type='hidden' name='hosted_button_id' value='6P25MGTZ4MEZ8' />
+            <PayPalButton
+              type='image'
+              src='https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif'
+              border='0'
+              name='submit'
+              title='PayPal - The safer, easier way to pay online!'
+              alt='Donate with PayPal button'
+            />
+          </PayPalForm>
         </DonateCard>
       </Content>
     </PageWrapper>
