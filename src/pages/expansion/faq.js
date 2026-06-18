@@ -6,21 +6,23 @@ import Sidebar from '../../components/Sidebar';
 import { faqData } from './faqData';
 
 const PageWrapper = styled.div`
-  background: #fff;
+  background: #f9f8f6;
   min-height: 100vh;
 `;
 
 const Header = styled.div`
-  background: #0038ff;
-  padding: 120px 24px 60px;
+  background: linear-gradient(135deg, #1e2a4a 0%, #2c3e6b 60%, #1e2a4a 100%);
+  padding: 130px 24px 60px;
 `;
 
 const HeaderTitle = styled.h1`
   color: #fff;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   max-width: 1100px;
   margin: 0 auto 12px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
 
   @media screen and (max-width: 768px) {
     font-size: 1.8rem;
@@ -32,9 +34,11 @@ const Breadcrumb = styled.div`
   margin: 0 auto 20px;
 
   a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
 
     &:hover {
       color: #fff;
@@ -42,8 +46,8 @@ const Breadcrumb = styled.div`
   }
 
   span {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
     margin: 0 8px;
   }
 `;
@@ -51,51 +55,54 @@ const Breadcrumb = styled.div`
 const Content = styled.div`
   max-width: 780px;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 56px 24px;
 `;
 
 const QAItem = styled.div`
-  border-bottom: 1px solid #eee;
-  padding-bottom: 32px;
-  margin-bottom: 32px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(30, 42, 74, 0.05);
 
-  &:last-child {
-    border-bottom: none;
+  @media screen and (max-width: 768px) {
+    padding: 24px 20px;
   }
 `;
 
 const Question = styled.h3`
-  color: #303030;
-  font-size: 1.1rem;
-  font-weight: 600;
+  color: #1e2a4a;
+  font-size: 1.05rem;
+  font-weight: 700;
   line-height: 1.5;
   margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const Answer = styled.div`
-  color: #555;
+  color: #64748b;
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.85;
 `;
 
 const AnswerList = styled.ol`
-  color: #555;
+  color: #64748b;
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.85;
   margin: 8px 0 0 20px;
   padding: 0;
 `;
 
 const SitePlanImage = styled.img`
   width: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   display: block;
   margin: 16px 0 4px;
 `;
 
 const ImageCaption = styled.p`
-  color: #999;
-  font-size: 0.8rem;
+  color: #94a3b8;
+  font-size: 0.78rem;
   text-align: center;
   margin: 8px 0 0;
 `;

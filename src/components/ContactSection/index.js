@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { FaEnvelope, FaMapMarkerAlt, FaFacebook, FaHeart } from 'react-icons/fa';
 
 const FooterContainer = styled.footer`
-  background: #1a1a1a;
-  padding: 60px 24px 32px;
+  background: #111827;
+  padding: 72px 24px 36px;
 `;
 
 const Inner = styled.div`
@@ -17,7 +17,7 @@ const TopRow = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   @media screen and (max-width: 640px) {
     grid-template-columns: 1fr;
@@ -32,23 +32,24 @@ const BrandName = styled.p`
   font-weight: 700;
   color: #fff;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const BrandTagline = styled.p`
   font-size: 0.9rem;
-  color: #888;
-  line-height: 1.6;
-  max-width: 280px;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  max-width: 300px;
 `;
 
 const ContactCol = styled.div``;
 
 const ColHeading = styled.h3`
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #888;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #c8963e;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   margin-bottom: 20px;
 `;
 
@@ -61,9 +62,9 @@ const ContactList = styled.ul`
 
 const ContactItem = styled.li`
   a {
-    color: #bbb;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -74,9 +75,9 @@ const ContactItem = styled.li`
     }
 
     svg {
-      color: #0038ff;
+      color: #c8963e;
       flex-shrink: 0;
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 `;
@@ -95,8 +96,8 @@ const BottomRow = styled.div`
 `;
 
 const Copyright = styled.p`
-  font-size: 0.8rem;
-  color: #555;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.25);
 `;
 
 const ContactSection = () => {
@@ -126,7 +127,7 @@ const ContactSection = () => {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <FaMapMarkerAlt /> 11423 Redmond–Woodinville Rd NE, Redmond, WA
+                  <FaMapMarkerAlt /> 11423 Redmond-Woodinville Rd NE, Redmond, WA
                 </a>
               </ContactItem>
               <ContactItem>
@@ -151,7 +152,7 @@ const ContactSection = () => {
           </ContactCol>
         </TopRow>
         <BottomRow>
-          <Copyright>© {year} Holy Resurrection Armenian School. All rights reserved.</Copyright>
+          <Copyright>&copy; {year} Holy Resurrection Armenian School. All rights reserved.</Copyright>
         </BottomRow>
       </Inner>
     </FooterContainer>

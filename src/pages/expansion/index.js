@@ -5,32 +5,50 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
 const PageWrapper = styled.div`
-  background: #fff;
+  background: #f9f8f6;
   min-height: 100vh;
 `;
 
 const Hero = styled.div`
-  background: #0038ff;
-  padding: 120px 24px 80px;
+  background: linear-gradient(135deg, #1e2a4a 0%, #2c3e6b 60%, #1e2a4a 100%);
+  padding: 140px 24px 90px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(200, 150, 62, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
 `;
 
 const HeroTitle = styled.h1`
   color: #fff;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 800;
   margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
+  position: relative;
 
   @media screen and (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 `;
 
 const HeroSubtitle = styled.p`
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.2rem;
-  max-width: 600px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  max-width: 560px;
   margin: 0 auto;
+  line-height: 1.7;
+  position: relative;
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;
@@ -40,8 +58,8 @@ const HeroSubtitle = styled.p`
 const Section = styled.section`
   max-width: 1100px;
   margin: 0 auto;
-  padding: 60px 24px;
-  border-bottom: 1px solid #eee;
+  padding: 56px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
   &:last-child {
     border-bottom: none;
@@ -49,20 +67,22 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h2`
-  color: #303030;
-  font-size: 1.8rem;
-  font-weight: 600;
-  margin-bottom: 16px;
+  color: #1e2a4a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.01em;
 `;
 
 const SectionText = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 1rem;
   line-height: 1.8;
 `;
 
 const FeatureList = styled.ul`
-  color: #555;
+  color: #64748b;
   font-size: 1rem;
   line-height: 2;
   margin: 16px 0 16px 20px;
@@ -70,43 +90,50 @@ const FeatureList = styled.ul`
 
   li {
     margin-bottom: 4px;
+
+    &::marker {
+      color: #c8963e;
+    }
   }
 `;
 
 const ProjectImage = styled.img`
   width: 100%;
   margin-top: 32px;
-  border-radius: 10px;
+  border-radius: 16px;
   display: block;
+  box-shadow: 0 12px 40px rgba(30, 42, 74, 0.1);
 `;
 
 const SectionLink = styled(Link)`
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-top: 16px;
-  color: #0038ff;
-  font-size: 0.95rem;
+  color: #c8963e;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid #0038ff;
-  padding-bottom: 2px;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  gap: 4px;
 
   &:hover {
-    opacity: 0.75;
+    color: #b5842e;
+    gap: 8px;
   }
 `;
 
 const ComingSoonBadge = styled.span`
   display: inline-block;
-  background: #0038ff;
+  background: linear-gradient(135deg, #c8963e, #d4a853);
   color: #fff;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   padding: 4px 12px;
-  border-radius: 50px;
+  border-radius: 6px;
   margin-left: 12px;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 `;
 
 const ExpansionPage = () => {
@@ -143,8 +170,8 @@ const ExpansionPage = () => {
           gatherings, and major events.
         </SectionText>
         <ProjectImage
-          src='/images/church-current.png'
-          alt='Armenian Church and School in Redmond, Washington'
+          src='/images/building_only.png'
+          alt='Armenian Community Center building rendering'
         />
         <SectionText style={{ marginTop: '24px' }}>
           This is not just a construction project. It is a statement of who we

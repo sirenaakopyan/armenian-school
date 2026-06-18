@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AboutContainer = styled.section`
-  background: #fff;
-  padding: 80px 24px;
+  background: #f9f8f6;
+  padding: 100px 24px;
 `;
 
 const Inner = styled.div`
@@ -11,7 +11,7 @@ const Inner = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 72px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -23,24 +23,36 @@ const Content = styled.div`
   flex: 1;
 `;
 
-const Heading = styled.h2`
-  font-size: 2.2rem;
+const Eyebrow = styled.p`
+  font-size: 0.75rem;
   font-weight: 700;
-  color: #303030;
+  color: #c8963e;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin-bottom: 12px;
 `;
 
-const Subheading = styled.h3`
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0038ff;
+const Heading = styled.h2`
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1e2a4a;
   margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+`;
+
+const Subheading = styled.h3`
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c4a7c;
+  margin-bottom: 20px;
 `;
 
 const Body = styled.p`
   font-size: 1rem;
-  color: #555;
-  line-height: 1.8;
+  color: #64748b;
+  line-height: 1.9;
 `;
 
 const ImageWrapper = styled.div`
@@ -48,8 +60,9 @@ const ImageWrapper = styled.div`
 
   img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 16px;
     display: block;
+    box-shadow: 0 20px 60px rgba(30, 42, 74, 0.12);
   }
 `;
 
@@ -58,6 +71,7 @@ const AboutSection = () => {
     <AboutContainer id='about'>
       <Inner>
         <Content>
+          <Eyebrow>Our Mission</Eyebrow>
           <Heading>About Us</Heading>
           <Subheading>We are the Sourp Harutyun Armenian School</Subheading>
           <Body>

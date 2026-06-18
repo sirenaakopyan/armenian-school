@@ -5,21 +5,23 @@ import Navbar from '../../components/Navbar';
 import Sidebar from '../../components/Sidebar';
 
 const PageWrapper = styled.div`
-  background: #fff;
+  background: #f9f8f6;
   min-height: 100vh;
 `;
 
 const Header = styled.div`
-  background: #0038ff;
-  padding: 120px 24px 60px;
+  background: linear-gradient(135deg, #1e2a4a 0%, #2c3e6b 60%, #1e2a4a 100%);
+  padding: 130px 24px 60px;
 `;
 
 const HeaderTitle = styled.h1`
   color: #fff;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   max-width: 1100px;
   margin: 0 auto 12px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
 
   @media screen and (max-width: 768px) {
     font-size: 1.8rem;
@@ -31,9 +33,11 @@ const Breadcrumb = styled.div`
   margin: 0 auto 20px;
 
   a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
 
     &:hover {
       color: #fff;
@@ -41,8 +45,8 @@ const Breadcrumb = styled.div`
   }
 
   span {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
     margin: 0 8px;
   }
 `;
@@ -50,69 +54,73 @@ const Breadcrumb = styled.div`
 const Content = styled.div`
   max-width: 780px;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 56px 24px;
 `;
 
 const Intro = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 1rem;
-  line-height: 1.8;
-  margin-bottom: 24px;
+  line-height: 1.85;
+  margin-bottom: 28px;
 `;
 
 const Highlight = styled.div`
-  background: #fff8f0;
-  border-left: 4px solid #e8740c;
-  padding: 24px 28px;
-  border-radius: 0 8px 8px 0;
+  background: #fff;
+  border-left: 4px solid #c8963e;
+  padding: 28px 32px;
+  border-radius: 0 16px 16px 0;
   margin-bottom: 40px;
+  box-shadow: 0 2px 12px rgba(30, 42, 74, 0.05);
 `;
 
 const HighlightText = styled.p`
-  color: #444;
+  color: #1e2a4a;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.7;
   margin: 0;
 `;
 
 const SectionTitle = styled.h2`
-  color: #303030;
+  color: #1e2a4a;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 16px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const Text = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 0.95rem;
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 16px;
 `;
 
 const DonateCard = styled.div`
-  background: #f7f8fc;
-  border-radius: 12px;
-  padding: 40px 32px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 48px 36px;
   margin-top: 40px;
   text-align: center;
+  box-shadow: 0 4px 20px rgba(30, 42, 74, 0.06);
 
   @media screen and (max-width: 768px) {
-    padding: 28px 20px;
+    padding: 32px 20px;
   }
 `;
 
 const DonateCardTitle = styled.h3`
-  color: #303030;
+  color: #1e2a4a;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const DonateCardText = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 28px;
 `;
 
@@ -123,10 +131,12 @@ const PayPalForm = styled.form`
 const PayPalButton = styled.input`
   cursor: pointer;
   border: none;
-  transition: opacity 0.2s;
+  transition: all 0.25s ease;
+  border-radius: 8px;
 
   &:hover {
     opacity: 0.85;
+    transform: translateY(-1px);
   }
 `;
 

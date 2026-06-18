@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
 import {
+  TricolorStripe,
   Nav,
   NavbarContainer,
   NavLogo,
@@ -15,6 +16,7 @@ import {
 const Navbar = ({ toggleState }) => {
   return (
     <>
+      <TricolorStripe />
       <Nav>
         <NavbarContainer>
           <NavLogo to='/'>

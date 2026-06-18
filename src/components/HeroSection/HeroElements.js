@@ -10,6 +10,22 @@ export const HeroContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 42, 74, 0.75) 0%,
+      rgba(30, 42, 74, 0.5) 50%,
+      rgba(200, 150, 62, 0.2) 100%
+    );
+    z-index: 2;
+  }
 `;
 
 export const HeroBg = styled.div`
@@ -28,7 +44,7 @@ export const VideoBg = styled.video`
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  background: #232a34;
+  background: #1e2a4a;
 `;
 
 export const HeroContent = styled.div`
@@ -43,15 +59,19 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.h1`
   color: #fff;
-  font-size: 48px;
+  font-size: 3.5rem;
+  font-weight: 800;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 
   @media screen and (max-width: 768px) {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 2rem;
   }
 `;
 
@@ -72,13 +92,13 @@ export const HeroP = styled.p`
 `;
 
 export const HeroSubtitle = styled.p`
-  margin-top: 16px;
+  margin-top: 20px;
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   text-align: center;
-  max-width: 560px;
+  max-width: 520px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
 
   @media screen and (max-width: 768px) {
     font-size: 1rem;
@@ -86,7 +106,7 @@ export const HeroSubtitle = styled.p`
 `;
 
 export const HeroBtnWrapper = styled.div`
-  margin-top: 36px;
+  margin-top: 40px;
   display: flex;
   gap: 16px;
   align-items: center;
@@ -97,10 +117,10 @@ export const HeroBtnWrapper = styled.div`
 `;
 
 export const HeroBtn = styled.a`
-  border-radius: 50px;
-  background: #0038ff;
+  border-radius: 8px;
+  background: #c8963e;
   white-space: nowrap;
-  padding: 12px 32px;
+  padding: 14px 36px;
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
@@ -108,31 +128,35 @@ export const HeroBtn = styled.a`
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
 
   &:hover {
-    background: #fff;
-    color: #0038ff;
+    background: #b5842e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(200, 150, 62, 0.35);
   }
 `;
 
 export const HeroBtnOutline = styled.a`
-  border-radius: 50px;
-  background: transparent;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   white-space: nowrap;
-  padding: 12px 32px;
+  padding: 14px 36px;
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
   outline: none;
-  border: 2px solid #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease;
 
   &:hover {
-    background: #fff;
-    color: #303030;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
   }
 `;
 

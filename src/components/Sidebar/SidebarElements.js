@@ -8,7 +8,9 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: grid;
   align-items: center;
   top: 0;
@@ -16,11 +18,10 @@ export const SidebarContainer = styled.aside`
   transition: 0.3s ease-in-out;
   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: #303030;
+  color: #1e2a4a;
 `;
 
 export const Icon = styled.div`
@@ -34,7 +35,7 @@ export const Icon = styled.div`
 `;
 
 export const SidebarWrapper = styled.div`
-  color: #303030;
+  color: #1e2a4a;
 `;
 
 export const SidebarMenu = styled.ul`
@@ -52,15 +53,17 @@ export const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: #303030;
+  color: #1e2a4a;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 
   &:hover {
-    color: #0038ff;
+    color: #c8963e;
     transition: 0.2s ease-in-out;
   }
 `;
@@ -69,15 +72,17 @@ export const SidebarRouterLink = styled(LinkR)`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: #303030;
+  color: #1e2a4a;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
 
   &:hover {
-    color: #0038ff;
+    color: #c8963e;
     transition: 0.2s ease-in-out;
   }
 `;
@@ -88,21 +93,21 @@ export const SideBtnWrap = styled.div`
 `;
 
 export const SidebarRoute = styled(LinkR)`
-  border-radius: 50px;
-  background: #0038ff;
+  border-radius: 8px;
+  background: #c8963e;
   white-space: nowrap;
   padding: 16px 64px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease;
   text-decoration: none;
 
   &:hover {
-    transition: 0.2s ease-in-out;
-    background: #fff;
-    color: #0038ff;
+    background: #b5842e;
+    transform: translateY(-1px);
   }
 `;

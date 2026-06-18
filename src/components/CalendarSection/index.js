@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const CalendarContainer = styled.section`
+  background: #f9f8f6;
+  padding-top: 3px;
+
   iframe {
     width: 100%;
     min-height: calc(100vh - 80px);

@@ -8,21 +8,23 @@ import { searchContent } from './searchIndex';
 const CONTACT_EMAIL = 'armenianswa@gmail.com';
 
 const PageWrapper = styled.div`
-  background: #fff;
+  background: #f9f8f6;
   min-height: 100vh;
 `;
 
 const Header = styled.div`
-  background: #0038ff;
-  padding: 120px 24px 60px;
+  background: linear-gradient(135deg, #1e2a4a 0%, #2c3e6b 60%, #1e2a4a 100%);
+  padding: 130px 24px 60px;
 `;
 
 const HeaderTitle = styled.h1`
   color: #fff;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   max-width: 1100px;
   margin: 0 auto 12px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
 
   @media screen and (max-width: 768px) {
     font-size: 1.8rem;
@@ -34,15 +36,17 @@ const Breadcrumb = styled.div`
   margin: 0 auto 20px;
 
   a {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.2s;
     &:hover { color: #fff; }
   }
 
   span {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.85rem;
     margin: 0 8px;
   }
 `;
@@ -50,13 +54,13 @@ const Breadcrumb = styled.div`
 const Content = styled.div`
   max-width: 780px;
   margin: 0 auto;
-  padding: 60px 24px;
+  padding: 56px 24px;
 `;
 
 const Intro = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 1rem;
-  line-height: 1.8;
+  line-height: 1.85;
   margin-bottom: 32px;
 `;
 
@@ -66,138 +70,159 @@ const InputGroup = styled.div`
 
 const Label = styled.label`
   display: block;
-  color: #303030;
-  font-size: 0.9rem;
+  color: #1e2a4a;
+  font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 6px;
+  letter-spacing: 0.01em;
 `;
 
 const TextArea = styled.textarea`
   width: 100%;
   min-height: 100px;
-  padding: 14px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
   font-size: 0.95rem;
   font-family: inherit;
   line-height: 1.6;
   resize: vertical;
   box-sizing: border-box;
-  transition: border-color 0.15s;
-  &:focus { outline: none; border-color: #0038ff; }
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &:focus {
+    outline: none;
+    border-color: #c8963e;
+    box-shadow: 0 0 0 3px rgba(200, 150, 62, 0.1);
+  }
 `;
 
 const Input = styled.input`
   width: 100%;
-  padding: 12px 14px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
   font-size: 0.95rem;
   font-family: inherit;
   box-sizing: border-box;
-  transition: border-color 0.15s;
-  &:focus { outline: none; border-color: #0038ff; }
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &:focus {
+    outline: none;
+    border-color: #c8963e;
+    box-shadow: 0 0 0 3px rgba(200, 150, 62, 0.1);
+  }
 `;
 
 const Button = styled.button`
   display: inline-block;
-  background: #0038ff;
+  background: #c8963e;
   color: #fff;
   font-size: 1rem;
   font-weight: 600;
   padding: 14px 36px;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.2s;
-  &:hover { opacity: 0.85; }
-  &:disabled { opacity: 0.5; cursor: not-allowed; }
+  transition: all 0.25s ease;
+  letter-spacing: 0.01em;
+  &:hover {
+    background: #b5842e;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(200, 150, 62, 0.3);
+  }
+  &:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
 `;
 
 const SecondaryButton = styled.button`
   display: inline-block;
   background: none;
-  color: #0038ff;
+  color: #c8963e;
   font-size: 0.9rem;
   font-weight: 600;
   padding: 10px 24px;
-  border: 1px solid #0038ff;
-  border-radius: 50px;
+  border: 1.5px solid #c8963e;
+  border-radius: 8px;
   cursor: pointer;
   margin-left: 12px;
-  transition: all 0.2s;
-  &:hover { background: #0038ff; color: #fff; }
+  transition: all 0.25s ease;
+  &:hover { background: #c8963e; color: #fff; }
 `;
 
 const ResultCard = styled.div`
-  background: #f7f8fc;
-  border-radius: 10px;
-  padding: 24px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px 28px;
   margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(30, 42, 74, 0.05);
 `;
 
 const ResultType = styled.span`
-  color: #0038ff;
-  font-size: 0.75rem;
-  font-weight: 600;
+  color: #c8963e;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
 `;
 
 const ResultTitle = styled.h3`
-  color: #303030;
+  color: #1e2a4a;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin: 6px 0 8px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const ResultExcerpt = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 0.9rem;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 12px;
 `;
 
 const ResultLink = styled(Link)`
-  color: #0038ff;
+  color: #c8963e;
   font-size: 0.85rem;
+  font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid #0038ff;
-  &:hover { opacity: 0.75; }
+  transition: color 0.2s;
+  &:hover { color: #b5842e; }
 `;
 
 const FollowUp = styled.div`
   margin-top: 28px;
   padding-top: 24px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 `;
 
 const FollowUpText = styled.p`
-  color: #303030;
+  color: #1e2a4a;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 16px;
 `;
 
 const SuccessBox = styled.div`
-  background: #f0faf0;
-  border: 1px solid #b2dfb2;
-  border-radius: 10px;
-  padding: 32px;
+  background: #fff;
+  border: 1.5px solid #86efac;
+  border-radius: 16px;
+  padding: 40px;
   text-align: center;
+  box-shadow: 0 2px 12px rgba(34, 197, 94, 0.06);
 `;
 
 const SuccessTitle = styled.h3`
-  color: #2e7d32;
+  color: #16a34a;
   font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const SuccessText = styled.p`
-  color: #555;
+  color: #64748b;
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.75;
 `;
 
 function truncate(text, len) {
@@ -207,7 +232,7 @@ function truncate(text, len) {
 
 const SubmitQuestionPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [stage, setStage] = useState('asking'); // asking | found | form | sent
+  const [stage, setStage] = useState('asking');
   const [question, setQuestion] = useState('');
   const [results, setResults] = useState([]);
   const [name, setName] = useState('');
@@ -247,7 +272,6 @@ const SubmitQuestionPage = () => {
       '_self'
     );
 
-    // Show success after a brief delay
     setTimeout(() => {
       setSending(false);
       setStage('sent');
