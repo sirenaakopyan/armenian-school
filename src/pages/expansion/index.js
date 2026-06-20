@@ -60,6 +60,7 @@ const Section = styled.section`
   margin: 0 auto;
   padding: 56px 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  scroll-margin-top: 80px;
 
   &:last-child {
     border-bottom: none;
@@ -122,22 +123,166 @@ const SectionLink = styled(Link)`
   }
 `;
 
-const ComingSoonBadge = styled.span`
-  display: inline-block;
-  background: linear-gradient(135deg, #c8963e, #d4a853);
-  color: #fff;
-  font-size: 0.7rem;
+const FinancialsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 28px 0 32px;
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const StatCard = styled.div`
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(30, 42, 74, 0.05);
+  text-align: center;
+`;
+
+const StatLabel = styled.p`
+  color: #94a3b8;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 12px;
-  border-radius: 6px;
-  margin-left: 12px;
-  vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+`;
+
+const StatValue = styled.p`
+  color: #1e2a4a;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.02em;
+`;
+
+const StatNote = styled.p`
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin-top: 4px;
+`;
+
+const ProgressBarOuter = styled.div`
+  background: #e8e6e1;
+  border-radius: 8px;
+  height: 12px;
+  width: 100%;
+  margin: 20px 0 8px;
+  overflow: hidden;
+`;
+
+const ProgressBarInner = styled.div`
+  background: linear-gradient(90deg, #c8963e, #d4a853);
+  height: 100%;
+  border-radius: 8px;
+  width: ${({ percent }) => percent}%;
+  transition: width 1s ease;
+`;
+
+const ProgressLabel = styled.div`
+  display: flex;
+  justify-content: space-between;
+  color: #94a3b8;
+  font-size: 0.78rem;
+`;
+
+const ExpenseTable = styled.div`
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(30, 42, 74, 0.05);
+  margin-top: 28px;
+`;
+
+const ExpenseTableTitle = styled.div`
+  padding: 20px 24px 12px;
+  color: #1e2a4a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 1px solid #f1f0ed;
+`;
+
+const ExpenseRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  padding: 16px 24px;
+  align-items: center;
+  border-bottom: 1px solid #f8f7f4;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+`;
+
+const ExpenseName = styled.div`
+  color: #1e2a4a;
+  font-size: 0.9rem;
+  font-weight: 600;
+`;
+
+const ExpenseDetail = styled.div`
+  color: #94a3b8;
+  font-size: 0.8rem;
+`;
+
+const ExpenseAmount = styled.div`
+  color: #1e2a4a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: right;
+  font-family: 'Poppins', sans-serif;
+`;
+
+const ExpenseTotal = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: #f9f8f6;
+  color: #1e2a4a;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+`;
+
+const Disclaimer = styled.p`
+  color: #94a3b8;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  margin-top: 20px;
+  font-style: italic;
+`;
+
+const ExpandButton = styled.button`
+  background: none;
+  border: 1.5px solid #c8963e;
+  color: #c8963e;
+  padding: 8px 22px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: #c8963e;
+    color: #fff;
+  }
 `;
 
 const ExpansionPage = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [financialsOpen, setFinancialsOpen] = useState(false);
   const toggleHandler = () => setIsOpen(!isOpen);
 
   return (
@@ -151,7 +296,7 @@ const ExpansionPage = () => {
         </HeroSubtitle>
       </Hero>
 
-      <Section>
+      <Section id='about'>
         <SectionTitle>About the Project</SectionTitle>
         <SectionText>
           We are building a multifunctional Community Center that will serve as
@@ -179,7 +324,7 @@ const ExpansionPage = () => {
         </SectionText>
       </Section>
 
-      <Section>
+      <Section id='updates'>
         <SectionTitle>Updates</SectionTitle>
         <SectionText>
           Monthly project updates and milestone announcements from the Expansion Committee.
@@ -187,17 +332,82 @@ const ExpansionPage = () => {
         <SectionLink to='/expansion/updates'>Read all updates &rarr;</SectionLink>
       </Section>
 
-      <Section>
-        <SectionTitle>
-          Financials <ComingSoonBadge>Coming Soon</ComingSoonBadge>
-        </SectionTitle>
+      <Section id='financials'>
+        <SectionTitle>Financials</SectionTitle>
         <SectionText>
-          Fundraising goals, contributions received, and expenditure breakdowns
-          will be published here for full community transparency.
+          We are committed to full transparency with our community. Below is a
+          summary of funds raised and expenses to date for the Community Center
+          and School expansion project.
         </SectionText>
+
+        <ExpandButton onClick={() => setFinancialsOpen(!financialsOpen)}>
+          {financialsOpen ? 'Hide details' : 'View financial report'}
+        </ExpandButton>
+
+        {financialsOpen && (
+          <>
+            <FinancialsGrid>
+              <StatCard>
+                <StatLabel>Total Raised</StatLabel>
+                <StatValue>$25,000</StatValue>
+              </StatCard>
+              <StatCard>
+                <StatLabel>Total Spent</StatLabel>
+                <StatValue>$7,754</StatValue>
+                <StatNote>Pre-construction phase</StatNote>
+              </StatCard>
+              <StatCard>
+                <StatLabel>Estimated Project Cost</StatLabel>
+                <StatValue>$2.5&ndash;3M</StatValue>
+                <StatNote>Subject to final design</StatNote>
+              </StatCard>
+            </FinancialsGrid>
+
+            <SectionText style={{ fontWeight: 600, color: '#1e2a4a', fontSize: '0.95rem' }}>
+              Fundraising Progress
+            </SectionText>
+            <ProgressBarOuter>
+              <ProgressBarInner percent={1} />
+            </ProgressBarOuter>
+            <ProgressLabel>
+              <span>$25,000 raised</span>
+              <span>~$2,750,000 goal (midpoint estimate)</span>
+            </ProgressLabel>
+
+            <ExpenseTable>
+              <ExpenseTableTitle>Expenditure Breakdown</ExpenseTableTitle>
+              <ExpenseRow>
+                <div>
+                  <ExpenseName>Pre-Application Meeting</ExpenseName>
+                  <ExpenseDetail>City of Redmond &middot; Jul 17, 2024</ExpenseDetail>
+                </div>
+                <ExpenseDetail></ExpenseDetail>
+                <ExpenseAmount>$1,904</ExpenseAmount>
+              </ExpenseRow>
+              <ExpenseRow>
+                <div>
+                  <ExpenseName>Topographic Survey</ExpenseName>
+                  <ExpenseDetail>M.S. Webb &middot; Dec 14, 2024</ExpenseDetail>
+                </div>
+                <ExpenseDetail></ExpenseDetail>
+                <ExpenseAmount>$5,850</ExpenseAmount>
+              </ExpenseRow>
+              <ExpenseTotal>
+                <span>Total Expenses</span>
+                <span>$7,754</span>
+              </ExpenseTotal>
+            </ExpenseTable>
+
+            <Disclaimer>
+              Figures are as reported by the project treasurer. Accurate cost
+              estimates will be finalized once detailed designs are complete. This
+              section will be updated as new financial data becomes available.
+            </Disclaimer>
+          </>
+        )}
       </Section>
 
-      <Section>
+      <Section id='volunteer'>
         <SectionTitle>Volunteer Opportunities</SectionTitle>
         <SectionText>
           We are striving to minimize the cost of construction by leveraging the
@@ -209,7 +419,7 @@ const ExpansionPage = () => {
         </SectionLink>
       </Section>
 
-      <Section>
+      <Section id='donate'>
         <SectionTitle>Your Financial Support Is Needed</SectionTitle>
         <SectionText>
           Without broad participation of our community members this project will
@@ -221,7 +431,7 @@ const ExpansionPage = () => {
         </SectionLink>
       </Section>
 
-      <Section>
+      <Section id='faq'>
         <SectionTitle>F.A.Q.</SectionTitle>
         <SectionText>
           Answers to frequently asked questions about the expansion project.
@@ -229,7 +439,7 @@ const ExpansionPage = () => {
         <SectionLink to='/expansion/faq'>View all questions &rarr;</SectionLink>
       </Section>
 
-      <Section>
+      <Section id='submit'>
         <SectionTitle>Submit a Question</SectionTitle>
         <SectionText>
           Have a question about the expansion project? Check if it's already
