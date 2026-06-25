@@ -11,7 +11,7 @@ const PageWrapper = styled.div`
 
 const Hero = styled.div`
   background: linear-gradient(135deg, #1e2a4a 0%, #2c3e6b 60%, #1e2a4a 100%);
-  padding: 140px 24px 90px;
+  padding: 130px 24px 50px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -32,7 +32,6 @@ const HeroTitle = styled.h1`
   color: #fff;
   font-size: 3.2rem;
   font-weight: 800;
-  margin-bottom: 16px;
   font-family: 'Poppins', sans-serif;
   letter-spacing: -0.02em;
   position: relative;

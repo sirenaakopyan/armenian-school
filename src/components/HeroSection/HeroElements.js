@@ -57,6 +57,25 @@ export const HeroContent = styled.div`
   align-items: center;
 `;
 
+export const HeroLogo = styled.img`
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+
+  @media screen and (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
+`;
+
 export const HeroH1 = styled.h1`
   color: #fff;
   font-size: 3.5rem;

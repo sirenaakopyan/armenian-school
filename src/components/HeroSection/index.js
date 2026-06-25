@@ -5,6 +5,7 @@ import {
   HeroBg,
   VideoBg,
   HeroContent,
+  HeroLogo,
   HeroH1,
   HeroSubtitle,
   HeroBtnWrapper,
@@ -19,6 +20,7 @@ const HeroSection = () => {
         <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
       <HeroContent>
+        <HeroLogo src='/images/logo.png' alt='Seattle Armenian School crest' />
         <HeroH1>Holy Resurrection Armenian School</HeroH1>
         <HeroSubtitle>
           Nurturing the next generation of Armenian language, culture, and
